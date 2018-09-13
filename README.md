@@ -1,11 +1,11 @@
 QSyncable - Synchronize data between models
 ===========================================
 
-QSyncable provides a QML friendly list model (based on QAbstractItemModel) as a wrapper of any data structure from C++ / Javascript. Instead, to access data from the original source per query, it duplicates a copy of data locally, and keep updated by an average O(n) synchronization algorithm. Every update is carried by passing a full copy of data snapshot. It will find out the diff and transform into a list of change operations like insertion, removal and move. It will guarantee the behaviour is identical to the original QML ListModel. Therefore, UI components could react to the changes correctly.
+QSyncable provides a QML-friendly list model (based on QAbstractItemModel) as a wrapper of any data structure from C++ or Javascript. Instead of accessing data from the original source for every query, it duplicates a copy of the data locally and keeps it updated with an average O(n) synchronization algorithm. Every update is carried out by passing a full copy of the data snapshot. Once the diff has been created, it is transformed into a list of change operations such as insertions, removals and moves. It guarantees that the behaviour is identical to the original QML ListModel, enabling UI components to react to the changes correctly.
 
-An immediate benefit of using QSycnable is the simplification of the data pipeline. If you need your UI to respond to changes like insertion/removal correctly, you must update the ListModel by the corresponding method explicitly. QSyncable combines all kinds of update methods into a single way. Such that user doesn’t need to care about their differences and setup data binding by just a single connection.
+An immediate benefit of using QSycnable is the simplification of the data pipeline. If you need your UI to respond to changes like insertion/removal correctly, you must explicitly update the ListModel using the appropriate method. QSyncable combines all kinds of update methods into a single system, so that the user doesn’t need to care about their differences and can set up data bindings with a single connection.
 
-Moreover, QSyncable could also be used as a solution for the nested list model.
+Moreover, QSyncable could also be used as a solution for nested list models.
 
 Reference: 
 
